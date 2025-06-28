@@ -46,6 +46,7 @@ p{
     
 }
 
+
 /*middle section in navigation*/
 .mid-section-nav{
     display: flex;
@@ -64,6 +65,10 @@ p{
     margin-left: 100px;
     font-family: 'Alexandria';
     text-decoration: none;
+    transition: font-size 0.15s;
+}
+.midsection-link-nav:hover{
+    font-size:22px;
 }
 
 /*Project and Skill in Navigation*/
@@ -76,6 +81,10 @@ p{
     font-family: 'Alexandria';
     text-decoration: none;
     z-index: 100;
+    transition: font-size 0.15s;
+}
+.project-link-nav:hover{
+    font-size:22px;
 }
 
 /*Right Section Contact Button*/
@@ -405,6 +414,7 @@ p{
     padding-top:8px;
     padding-bottom: 8px;
     padding-left:10px ;
+    transition: box-shadow 0.15s;
 }
 
 
@@ -414,7 +424,7 @@ p{
     margin-top:20px;
     height:1300px;
     position:relative;
-    background-color: #e8e8e8;
+    background-color: #f9fbfc;
     box-shadow: 0 0 15px rgb(0,0,0,0.8);
     margin-top: 100px;
     margin-left:200px;
@@ -639,13 +649,22 @@ a{
     font-size: 18px;
     text-decoration: none;
     color: #000000;
+    transition: font-size 0.15s;
    
 }
+.mail-id:hover,.linked-in-url:hover{
+    font-size: 19px;
+}
 .phone-no{
+    text-decoration: none;
     font-family: 'Alexandria';
     font-size: 18px;
     color:black;
     margin-left:-27px ;
+    transition: font-size 0.15s;
+}
+.phone-no:hover{
+    font-size: 19px;
 }
 .mail-me,.phone-me,.linked-in{
     position: absolute;
@@ -691,6 +710,10 @@ a{
     padding-bottom: 5px;
     transition: background-color 0.3s, color 0.3s;
     z-index: 100;
+    transition: font-size 0.15s;
+}
+.back-to-top:hover{
+    font-size: 18px;
 }
 .back-to-top.on-footer{
     color:white;
