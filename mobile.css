@@ -1,0 +1,659 @@
+/*Body*/
+html{
+    scroll-behavior: smooth;
+    
+}
+
+body{
+    margin:0;
+    
+    padding: 0;
+    background-color: #f4f1e8;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px)  {
+    .half-trapezoid {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 54%;
+        height: 250px;
+        background: #C8406E;
+        background: linear-gradient(0deg, rgba(200, 64, 110, 1) 6%, rgba(74, 6, 29, 1) 49%, rgba(0, 0, 0, 1) 97%);
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+        z-index: -1;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        height: 40px;
+        margin-top:5px;
+        margin-right: 4px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /*Website logo*/
+    .logo-img{
+        height:40px;
+        object-fit: cover;
+    }
+    .mid-section-nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    /*Home in Nav*/
+    .home-nav{
+        margin-left:-20px;
+    }
+    .midsection-link-nav{
+        color:#000000;
+        font-size: 15px;
+        margin-left: 10px;
+        font-family: 'Poppins';
+        text-decoration: none;
+    }
+    .project-link-nav{
+        color:rgb(255, 255, 255);
+        font-size: 15px;
+        margin-left: 10px;
+        font-family: 'Poppins';
+        text-decoration: none;
+        z-index: 100;
+    }
+    .ri-contact-button{
+        background-color:rgb(255, 255, 255);
+        padding-left: 5px;
+        padding-right: 7px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border-radius: 7px;
+        border: none;
+        transition: box-shadow 0.15s;
+    }
+    .contact-a{
+        text-decoration: none;
+        color:#000000;
+        font-family: 'Poppins';
+        font-size:15px;
+        font-weight: 600;
+    }
+    .hero-section{
+        position: relative;
+    }
+
+    /*Hero Work Image*/
+    .work-img{
+        position: absolute;
+        height:200px;
+        width:auto;
+        top:10px;
+        right:0px;
+        z-index: -1;
+    }
+
+    /*Hero section content*/
+    .first-line-text{
+        position: absolute;
+        font-family: 'Alexandria';
+        left: 15px;
+        top: 10px;
+        font-size: 16px;
+        z-index: 1;
+    }
+    .second-line-text{
+        position: absolute;
+        font-family: 'Alexandria';
+        color:rgb(92, 1, 32);  
+        font-weight:600;
+        left: 15px;
+        top: 35px;
+        font-size: 24px;
+        z-index: 1;
+    }
+    .third-line-text {
+        position: absolute;
+        width: 170px;
+        overflow: hidden;
+        left: 15px;
+        top: 70px;
+        z-index: 1;
+    }
+    /*Animation*/
+    .third-line-text .text {
+        position: relative;
+        color: #000000;
+        font-size: 18px;
+        font-family: 'Alexandria';
+    }
+    .third-line-text .text.first-text {
+        color: #000000;
+    }
+    .sec-text::after {
+        content: "|";
+        animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+        0% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    .about-section{
+        height:130px;
+        position:relative;
+        background-color: #E9E6DF;
+        /*box-shadow: 0 0 15px rgb(92, 1, 32,0.4);*/
+        margin-top: 220px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .about-section::before,
+    .about-section::after{
+        content:"";
+        position: absolute;
+        border-radius: inherit;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(to right, #000000,#5C0120);
+        filter:blur(4px);
+        z-index: -2;
+    }
+    /*Inner Gradient Cricle*/
+    .inner-gradient-circle{
+        position: absolute;
+        height:65px;
+        width:65px;
+        border-radius: 100%;
+        left: 15px;
+        top: 39px;
+        background: #C8406E;
+        background: linear-gradient(0deg, rgba(200, 64, 110, 1) 6%, rgba(74, 6, 29, 1) 49%, rgba(0, 0, 0, 1) 97%);
+        z-index: 1;
+    }
+    .arrow-img{
+        display: none;
+    }
+
+    /*Outer Circle*/
+    .outer-circle{
+        position: absolute;
+        height:67px;
+        width:67px;
+        border-radius: 100%;
+        left: 12px;
+        top: 33px;
+        background-color: transparent;
+        border: 3px solid rgb(0,0,0);
+        z-index: 1;
+    }
+    /*About Me Main*/
+    .about-me-section{
+        position: absolute;
+        top:15px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family:"Poppins";
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        font-size:16px;
+        font-weight: 600;
+    }
+    /*About Person Image*/
+    .person-img{
+        position: absolute;
+        top:13px;
+        left:2px;
+        height: 90px; 
+        z-index: 2;  
+    }
+    /*About me Content*/
+    .content-para-1{
+        position:absolute ;
+        font-family: 'Alexandria';
+        font-size:10px;
+        top:45px;
+        left:100px;
+        right:10px;
+    }
+    .content-para-2,.content-para-3{
+        display: none;
+    }
+    /*Skill Section*/
+    .skill-section{
+        position: relative;
+        margin-top:10px;
+        height: 200px;
+    }
+    /*Skill Section heading*/
+    .Skill-section-main{
+        position: absolute;
+        top:2px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family:"Poppins";
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        font-size:16px;
+        font-weight: 600;
+    }
+    /*Language Known Section*/
+    .Language-know-skill{
+        position: absolute;
+        top:40px;
+        left:20px;
+        font-family: 'Alexandria'; 
+        font-size: 13px;
+    }
+
+    /*known Language image and text*/
+    .known-lang-img{
+        height:20px;
+        margin-bottom:5px;
+        margin-left:10px;
+    }
+    .known-lang-text{
+        font-family: 'Alexandria';
+        font-size:10px;
+        
+    }
+    /*Known Language container*/
+    .html-lan,.cpp-lan,.css-lan,.java-lan,.python-lan,.mysql-lan{
+        flex-direction: column;
+        text-align: center;
+        margin-right: 25px;
+    }
+    .Known-container{
+        display: flex;
+        position: absolute;
+        top:65px;
+        left:20px;
+    }
+    /*Learning Languages Section*/
+    .learn-lang-skill{
+        position: absolute;
+        top:120px;
+        left:20px;
+        font-family: 'Alexandria'; 
+        font-size: 13px;
+    }
+    /*Learning lang text and img*/
+    .learn-lang-img{
+        height:20px;
+        margin-bottom:5px;
+        margin-left:10px;
+    }
+    .learn-lang-text{
+        font-family: 'Alexandria';
+        font-size:10px;
+    }
+    /*Learn Language Container*/
+    .js-lan,.nodejs-lan,.reactjs-lan,.figma-lan,.git-lan{
+        flex-direction: column;
+        text-align: center;
+        margin-right: 25px;
+    }
+    .learning-container{
+        display: flex;
+        position: absolute;
+        top:145px;
+        left:20px;
+    }
+    /*Other Skills*/
+    .personal-skills-heading{
+        position: absolute; 
+        top:200px;
+        left:20px;
+        font-family: 'Alexandria'; 
+        font-size: 13px;
+
+    }
+    /*Other Skill Container*/
+    .other-skill-container{
+        position: absolute;
+        display: flex;
+        top:230px;
+        left:20px;
+    }   
+    .other-skill-container-2{
+        position: absolute;
+        display: flex;
+        top:270px;
+        left:20px;
+    }
+    .other-skill-container-3{
+        position: absolute;
+        display: flex;
+        top:310px;
+        left:20px;
+    }
+    .other-skill-container-4{
+        position: absolute;
+        display: flex;
+        top:350px;
+        left:20px;
+    }
+    /*Other Skill content*/
+    .other-skills-content{
+        font-family: 'Alexandria';
+        font-size:11px;
+        border: 2px solid;
+        width: 144px;
+        margin-right: 20px;
+        padding-top:8px;
+        padding-bottom: 8px;
+        padding-left:10px ;
+    }
+    /*Project Section*/
+    .project-section{
+        position: relative;
+        margin-top:200px;
+        background-color: #d2d3d5;
+        box-shadow: 0 0 15px rgb(0,0,0,0.8);
+        z-index: -1;
+        height:1100px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    /*Project Section Main Heading*/
+    .project-section-main{
+        position: absolute;
+        top:15px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family:"Poppins";
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        font-size:16px;
+        font-weight: 600;
+    }
+    .projects-all-section{
+        display: flex;
+        flex-direction: column; 
+    }
+    /*Youtube Clone*/
+    .youtube-clone{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        width: 300px;
+        height: 290px;
+        top:60px;
+        margin-left:13px ;
+        background-color: rgb(41, 39, 39);
+        box-shadow: 0 0 10px rgba(0,0,0,.4);
+
+    }
+    .youtube-clone-heading{
+        font-family: 'Alexandria';
+        font-size:14px;
+        font-weight: 600;
+        padding-top: 10px;
+        text-align: center;
+        color:white;
+    }
+    .youtube-clone-img{
+        height:160px;
+        width: auto;
+        border-radius: 10px;
+    }
+    .youtube-clone-content{
+        font-family: 'Alexandria';
+        font-size: 13px;
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+        z-index: 1;
+        color:white;
+    }
+    /*Shopping Clone*/
+    .shopping-clone{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        width: 300px;
+        height: 280px;
+        top:370px;
+        margin-left:13px ;
+        background-color: rgb(41, 39, 39);
+        box-shadow: 0 0 10px rgba(0,0,0,.4);
+    }
+    .shopping-clone-img{
+        height:160px;
+        width: 300px;
+        margin-right: 20px;
+        border-radius: 10px;
+    }
+
+    .shopping-clone-heading{
+        font-family: 'Alexandria';
+        font-size:14px;
+        font-weight: 600;
+        padding-top: 10px;
+        text-align: center;
+        color:white;
+    }
+    .shopping-clone-content{
+        font-family: 'Alexandria';
+        font-size: 13px;
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+        z-index: 1;
+        color:white;
+    }
+    /*Billing app*/
+    .billing-app-img{
+        height:160px;
+        width: auto;
+        border-radius: 10px;
+    }
+    .billing-app{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        width: 300px;
+        height: 300px;
+        top:670px;
+        margin-left:13px ;
+        background-color: rgb(41, 39, 39);
+        box-shadow: 0 0 10px rgba(0,0,0,.4);
+    }
+    .billing-app-heading{
+        font-family: 'Alexandria';
+        font-size:14px;
+        font-weight: 600;
+        padding-top: 10px;
+        text-align: center;
+        color:white;
+    }   
+    .billing-app-content{
+        font-family: 'Alexandria';
+        font-size: 13px;
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+        z-index: 1;
+        color:white;
+    }
+
+    /*todo app*/
+    .todo-app-img{
+        height:160px;
+        width: auto;
+        border-radius: 10px;
+    }
+    .todo-app{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        width: 300px;
+        height: 300px;
+        top:680px;
+        margin-left:13px ;
+        background-color: rgb(41, 39, 39);
+        box-shadow: 0 0 10px rgba(0,0,0,.4);
+    }
+    .todo-app-heading{
+        font-family: 'Alexandria';
+        font-size:14px;
+        font-weight: 600;
+        padding-top: 10px;
+        text-align: center;
+        color:white;
+    }
+    .todo-app-content{
+        font-family: 'Alexandria';
+        font-size: 13px;
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+        z-index: 1;
+        color:white;
+    }
+
+    /*Contact Section*/
+    .contact-section{
+        position: relative;
+        height:500px;
+        position:relative;
+        margin-top: 10px;
+        pointer-events: auto;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    /*Contact Section Main Heading*/
+    .contact-section-main{
+        position: absolute;
+        top:10px;
+        left: 50%;
+        color:black;
+        transform: translateX(-50%);
+        font-family:"Poppins";
+        text-decoration: underline;
+        font-size:16px;
+        font-weight: 600;
+        text-underline-offset: 2px;
+    }
+    .contact-section-content{
+        position: absolute;
+        font-family: 'Alexandria';
+        top:50px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+    }
+    /*Mail Me Section*/
+    .mail-logo,.phone-logo,.linked-in-logo{
+        height: 40px;
+    }
+    .linked-in-logo{
+        margin-top: 100px;
+        
+    }
+    .mail-logo{
+        height: auto;
+        width:40px;
+        margin-top: -25px;
+        margin-bottom: 8px;
+        
+    }
+    .phone-logo{
+        height: 30px;
+        margin-bottom: 10px;
+        margin-top: 40px;
+        margin-left: 25px;
+        left:50%;
+        transform: translateX(-50%);
+    }
+    a{
+        position: relative;
+        z-index: 100;
+    }
+    .mail-id,.linked-in-url{
+        font-family: 'Alexandria';
+        font-size: 13px;
+        text-decoration: none;
+        color: #000000;
+    
+    }
+    .phone-no{
+        font-family: 'Alexandria';
+        font-size: 13px;
+        color:black;
+    }
+    .mail-me,.phone-me,.linked-in{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+        width: 300px;
+        top:140px;
+    }
+ 
+
+    /*Footer*/
+    .footer-end{
+        position: relative;
+        background-color: black;
+        height: 40px;
+    }
+    .back-to-top{
+        position: fixed;
+        color:black;
+        font-family: 'Alexandria';
+        font-size: 13px;
+        text-decoration: none;
+        bottom:5px;
+        right:10px;
+        border:2px solid black;
+        padding-top:5px ;
+        padding-left: 10px;
+        padding-bottom: 5px;
+        transition: background-color 0.3s, color 0.3s;
+        z-index: 100;
+    }
+    .back-to-top.on-footer{
+        color:white;
+        border: 2px solid white;
+        z-index: 10;
+    }
+    .footer-content{
+        position: absolute;
+        color:white;
+        font-family: 'Alexandria';
+        font-size: 13px;
+        top:5px;
+        left:50%;
+        transform: translateX(-50%);
+    }
+    .footer-logo{
+        position: absolute;
+        left: 10px;
+        top:5px;
+        height:30px;
+
+    }
+
+
+
+}

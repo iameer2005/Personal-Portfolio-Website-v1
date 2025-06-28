@@ -1,0 +1,720 @@
+/*Body*/
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    background-color: #f4f1e8;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+
+/*Background Trapezoid*/
+.half-trapezoid {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100vh;
+    background: #C8406E;
+    background: linear-gradient(0deg, rgba(200, 64, 110, 1) 6%, rgba(74, 6, 29, 1) 49%, rgba(0, 0, 0, 1) 97%);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: -1;
+}
+
+/*Nav Bar*/
+.navbar{
+    display: flex;
+    flex-direction: row;
+    height: 65px;
+    margin-top:20px;
+    border-radius: 100px;
+    margin-left: 8px;
+    margin-right: 8px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Website logo*/
+.logo-img{
+    height:80px;
+    margin-left: 0px;
+    
+}
+
+/*middle section in navigation*/
+.mid-section-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/*Home in Nav*/
+.home-nav{
+    margin-left: -100px;
+}
+
+/*Middle Section (Home,About,Skill) in Nav*/
+.midsection-link-nav{
+    color:#000000;
+    font-size: 20px;
+    margin-left: 100px;
+    font-family: 'Alexandria';
+    text-decoration: none;
+}
+
+/*Project and Skill in Navigation*/
+.project-link-nav{
+    margin-top: 10px;
+    margin-left: -300px;
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    margin-left: 100px;
+    font-family: 'Alexandria';
+    text-decoration: none;
+    z-index: 100;
+}
+
+/*Right Section Contact Button*/
+.ri-contact-button{
+    background-color:rgb(244, 241, 232);
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 7px;
+    margin-right: 30px;
+    border: none;
+    transition: box-shadow 0.15s;
+}
+.contact-a{
+    text-decoration: none;
+    color:#000000;
+    font-family: 'Roboto';
+    font-size:20px;
+    font-weight: 600;
+}
+.ri-contact-button:hover{
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(244, 241, 232,0.4);
+}
+
+/*Hero Section*/
+.hero-section{
+    position: relative;
+}
+
+/*Hero Work Image*/
+.work-img{
+    position: absolute;
+    height:750px;
+    width:740px;
+    top:-10px;
+    right:40px;
+    z-index: -1;
+}
+
+/*Hero section content*/
+.first-line-text{
+    position: absolute;
+    font-family: 'Alexandria';
+    left: 40px;
+    top: 100px;
+    font-size: 40px;
+    z-index: 1;
+}
+.second-line-text{
+    position: absolute;
+    font-family: 'Alexandria';
+    color:rgb(92, 1, 32);  
+    font-weight:600;
+    left: 25px;
+    top: 150px;
+    font-size: 100px;
+    z-index: 1;
+}
+.third-line-text {
+    position: absolute;
+    width: 620px;
+    overflow: hidden;
+    left: 25px;
+    top: 300px;
+    z-index: 1;
+}
+
+/*Animation*/
+.third-line-text .text {
+    position: relative;
+    color: #000000;
+    font-size: 60px;
+    font-family: 'Alexandria';
+}
+.third-line-text .text.first-text {
+    color: #000000;
+}
+.sec-text::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/*About me Section*/
+
+.about-section{
+    height:550px;
+    position:relative;
+    background-color: #E9E6DF;
+    /*box-shadow: 0 0 15px rgb(92, 1, 32,0.4);*/
+    margin-top: 710px;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+}
+
+.about-section::before,
+.about-section::after{
+    content:"";
+    position: absolute;
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #000000,#5C0120);
+    filter:blur(4px);
+    z-index: -2;
+}
+
+/*Inner Gradient Cricle*/
+.inner-gradient-circle{
+    position: absolute;
+    height:410px;
+    width:410px;
+    border-radius: 100%;
+    left: 35px;
+    top: 135px;
+    background: #C8406E;
+    background: linear-gradient(0deg, rgba(200, 64, 110, 1) 6%, rgba(74, 6, 29, 1) 49%, rgba(0, 0, 0, 1) 97%);
+    z-index: 1;
+}
+
+/*Outer Circle*/
+.outer-circle{
+    position: absolute;
+    height:425px;
+    width:425px;
+    border-radius: 100%;
+    left: 24px;
+    top: 115px;
+    background-color: transparent;
+    border: 3px solid rgb(0,0,0);
+    z-index: 1;
+}
+
+/*About Me Main*/
+.about-me-section{
+    position: absolute;
+    top:60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family:"Poppins";
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-size:35px;
+    font-weight: 600;
+}
+
+/*About Person Image*/
+.person-img{
+    position: absolute;
+    top:42px;
+    left:-15px;
+    height: 500px; 
+    z-index: 2;  
+}
+/*Arrow image*/
+.arrow-img{
+    position: absolute;
+    height: 300px;
+    z-index: 2;
+    top:290px;
+    right: 30px;
+    transform: rotate(320deg);
+}
+
+/*About me Content*/
+.content-para-1{
+    position:absolute ;
+    font-family: 'Alexandria';
+    font-size:20px;
+    top:150px;
+    left:500px;
+    right:120px;
+}
+.content-para-2{
+    position:absolute ;
+    font-family: 'Alexandria';
+    font-size:20px;
+    top:250px;
+    left:500px;
+    right: 120px;
+}
+.content-para-3{
+    position:absolute ;
+    font-family: 'Alexandria';
+    font-size:20px;
+    top:350px;
+    left:500px;
+    right:120px;
+}
+
+/*Skill Section*/
+.skill-section{
+    position: relative;
+    margin-top:20px;
+    height: 500px;
+}
+/*Skill Section heading*/
+.Skill-section-main{
+    position: absolute;
+    top:60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family:"Poppins";
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-size:35px;
+    font-weight: 600;
+}
+/*Language Known Section*/
+.Language-know-skill{
+    position: absolute;
+    top:170px;
+    left:120px;
+    font-family: 'Alexandria'; 
+    font-size: 22px;
+}
+
+/*known Language image and text*/
+.known-lang-img{
+    height:50px;
+    margin-bottom:5px;
+    margin-left:10px;
+}
+.known-lang-text{
+    font-family: 'Alexandria';
+    font-size:20px;
+    
+}
+/*Known Language container*/
+.html-lan,.cpp-lan,.css-lan,.java-lan,.python-lan,.mysql-lan{
+    flex-direction: column;
+    text-align: center;
+    margin-right: 30px;
+}
+.Known-container{
+    display: flex;
+    position: absolute;
+    top:230px;
+    left:120px;
+}
+
+/*Learning Languages Section*/
+.learn-lang-skill{
+    position: absolute;
+    top:360px;
+    left:120px;
+    font-family: 'Alexandria'; 
+    font-size: 22px;
+}
+/*Learning lang text and img*/
+.learn-lang-img{
+    height:50px;
+    margin-bottom:5px;
+    margin-left:10px;
+}
+.learn-lang-text{
+    font-family: 'Alexandria';
+    font-size:20px;
+}
+/*Learn Language Container*/
+.js-lan,.nodejs-lan,.reactjs-lan,.figma-lan,.git-lan{
+    flex-direction: column;
+    text-align: center;
+    margin-right: 30px;
+}
+.learning-container{
+    display: flex;
+    position: absolute;
+    top:420px;
+    left:120px;
+}
+/*Other Skills*/
+.personal-skills-heading{
+    position: absolute; 
+    top:170px;
+    left:800px;
+    font-family: 'Alexandria'; 
+    font-size: 22px;
+
+}
+/*Other Skill Container*/
+.other-skill-container{
+    position: absolute;
+    display: flex;
+    top:230px;
+    left:800px;
+}
+.other-skill-container-2{
+    position: absolute;
+    display: flex;
+    top:290px;
+    left:800px;
+}
+.other-skill-container-3{
+    position: absolute;
+    display: flex;
+    top:350px;
+    left:800px;
+}
+.other-skill-container-4{
+    position: absolute;
+    display: flex;
+    top:410px;
+    left:800px;
+}
+/*Other Skill Hover Effect*/
+.other-skills-content:hover{
+    cursor: pointer;
+    box-shadow:0 0 10px rgb(0,0,0,0.6);
+    
+}
+/*Other Skill content*/
+.other-skills-content{
+    font-family: 'Alexandria';
+    font-size:20px;
+    border: 2px solid;
+    width: 270px;
+    margin-right: 20px;
+    padding-top:8px;
+    padding-bottom: 8px;
+    padding-left:10px ;
+}
+
+
+/*Project Section*/
+.project-section{
+    position: relative;
+    margin-top:20px;
+    height:1300px;
+    position:relative;
+    background-color: #e8e8e8;
+    box-shadow: 0 0 15px rgb(0,0,0,0.8);
+    margin-top: 100px;
+    margin-left:200px;
+    margin-right: 200px;
+    z-index: -1;
+}
+
+/*Project Section Main Heading*/
+.project-section-main{
+    position: absolute;
+    top:30px;
+    left: 50%;
+    color:black;
+    transform: translateX(-50%);
+    font-family:"Poppins";
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-size:35px;
+    font-weight: 600;
+}
+.projects-all-section{
+    display: flex;
+    flex-direction: column; 
+}
+/*Youtube Clone*/
+.youtube-clone{
+    position: absolute;
+    display: flex;
+    border-radius: 10px;
+    width: 950px;
+    height: 200px;
+    top:160px;
+    transform: translateX(-50%);
+    left: 50%;
+    background-color: rgb(41, 39, 39);
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+
+}
+.youtube-clone-heading{
+    font-family: 'Alexandria';
+    font-size:17px;
+    font-weight: 600;
+    padding-top: 10px;
+    color:white;
+}
+.youtube-clone-img{
+    height:200px;
+    width: 400px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.youtube-clone-content{
+    font-family: 'Alexandria';
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    z-index: 1;
+    color:white;
+}
+/*Shopping Clone*/
+.shopping-clone{
+    position: absolute;
+    display: flex;
+    border-radius: 10px;
+    width: 950px;
+    height: 230px;
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    background-color: rgb(41, 39, 39);
+    top:400px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.shopping-clone-img{
+    height:230px;
+    width: 380px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.shopping-clone-heading{
+    font-family: 'Alexandria';
+    font-size:17px;
+    font-weight: 600;
+    padding-top: 10px;
+    color:white;
+}
+.shopping-clone-content{
+    font-family: 'Alexandria';
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right:10px;
+    color:white;
+}
+/*Billing app*/
+.billing-app-img{
+    height:240px;
+    width: 400px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.billing-app{
+    background-color: rgb(41, 39, 39);
+    position: absolute;
+    display: flex;
+    border-radius: 10px;
+    width: 950px;
+    height: 240px;
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    top:680px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.billing-app-heading{
+    font-family: 'Alexandria';
+    font-size:17px;
+    font-weight: 600;
+    padding-top: 10px;
+    color:white;
+}
+.billing-app-content{
+    font-family: 'Alexandria';
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right:10px;
+    color:white;
+}
+
+/*todo app*/
+.todo-app-img{
+    height:240px;
+    width: 390px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.todo-app{
+    background-color: rgb(41, 39, 39);
+    position: absolute;
+    display: flex;
+    border-radius: 10px;
+    width: 950px;
+    height: 240px;
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    top:970px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.todo-app-heading{
+    font-family: 'Alexandria';
+    font-size:17px;
+    font-weight: 600;
+    padding-top: 10px;
+    color:white;
+}
+.todo-app-content{
+    font-family: 'Alexandria';
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right:10px;
+    color:white;
+}
+
+/*Contact Section*/
+.contact-section{
+    position: relative;
+    height:300px;
+    position:relative;
+    margin-top: 70px;
+    margin-left: 100px;
+    margin-right: 100px;
+    pointer-events: auto;
+}
+
+/*Contact Section Main Heading*/
+.contact-section-main{
+    position: absolute;
+    top:10px;
+    left: 50%;
+    color:black;
+    transform: translateX(-50%);
+    font-family:"Poppins";
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-size:35px;
+    font-weight: 600;
+}
+.contact-section-content{
+    position: absolute;
+    font-size: 25px;
+    font-family: 'Alexandria';
+    top:100px;
+    left:50%;
+    transform: translateX(-50%);
+}
+/*Mail Me Section*/
+.mail-logo,.phone-logo,.linked-in-logo{
+    height: 70px;
+}
+.linked-in-logo{
+    margin-top: 3px;
+    
+}
+.mail-logo{
+    height: auto;
+    width:70px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    
+}
+.phone-logo{
+    height: 50px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    left:50%;
+    transform: translateX(-50%);
+}
+a{
+    position: relative;
+    z-index: 100;
+}
+.mail-id,.linked-in-url{
+    font-family: 'Alexandria';
+    font-size: 18px;
+    text-decoration: none;
+    color: #000000;
+   
+}
+.phone-no{
+    font-family: 'Alexandria';
+    font-size: 18px;
+    color:black;
+    margin-left:-27px ;
+}
+.mail-me,.phone-me,.linked-in{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    width: 300px;
+    top:140px;
+}
+.phone-me{
+    left:50%;
+    transform: translateX(-50%);
+}
+.mail-me{
+    left:30%;
+    transform: translateX(-70%);
+}
+.linked-in{
+    left:65%;
+    transform: translateX(-30%);
+}
+ 
+
+/*Footer*/
+.footer-end{
+    position: relative;
+    margin-top: 25px;
+    background-color: black;
+    height: 80px;
+
+}
+.back-to-top{
+    position: fixed;
+    color:rgb(0, 0, 0);
+    font-family: 'Alexandria';
+    text-decoration: none;
+    bottom:10px;
+    right:10px;
+    border:2px solid #000000;
+    padding-top:5px ;
+    padding-left: 7px;
+    padding-bottom: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 100;
+}
+.back-to-top.on-footer{
+    color:white;
+    border: 2px solid white;
+    z-index: 10;
+}
+.footer-content{
+    position: absolute;
+    color:white;
+    font-family: 'Alexandria';
+    top:25px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.footer-logo{
+    position: absolute;
+    left: 10px;
+    top:5px;
+    height:70px;
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .content-para-2,.content-para-3{
+        display: none;
+    }
+}
