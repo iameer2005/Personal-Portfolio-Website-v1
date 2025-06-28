@@ -596,6 +596,7 @@ p{
     
     }
     .phone-no{
+        text-decoration: none;
         font-family: 'Alexandria';
         font-size: 13px;
         color:black;
